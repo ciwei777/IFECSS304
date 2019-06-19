@@ -7,20 +7,28 @@
     <title>Document</title>
     <style>
       .wrap {
-        width: 250px;
-        height: 350px;
-        margin: 200px;
-        background: url("./images/正面.jpg") no-repeat;
-        background-size: 100%;
-        transition: all 1s;
+        position: relative;
+        margin: 100px;
       }
-      .wrap:hover {
+      img {
+        position: absolute;
+        transition: transform 0.6s;
+      }
+      .img1 {
+          backface-visibility: hidden;
+      }
+      .img2 {
+        z-index: -1;
+      }
+      .wrap:hover img {
         transform: rotateY(180deg);
-        background: url("./images/反面.jpg") no-repeat;
       }
     </style>
   </head>
   <body>
-    <div class="wrap"></div>
+    <div class="wrap">
+      <img src="./images/正面.jpg" alt="" class="img1" />
+      <img src="./images/反面.jpg" alt="" class="img2" />
+    </div>
   </body>
 </html>
