@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      .wrap {
+        width: 250px;
+        height: 350px;
+        margin: 200px;
+        background: url("./images/正面.jpg") no-repeat;
+        background-size: 100%;
+        transition: all 1s;
+      }
+      .wrap:hover {
+        transform: rotateY(180deg);
+        background: url("./images/反面.jpg") no-repeat;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap"></div>
+  </body>
+</html>
